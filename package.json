@@ -1,0 +1,21 @@
+{
+  "name": "polo_weather",
+  "version": "1.0.0",
+  "description": "Simple weather app, developed with Marco and OpenWeather API",
+  "main": "app.js",
+  "scripts": {
+    "build": "lasso --main app.js --inject-into index.html --config lasso.json && sass assets/styles.scss assets/styles.css"
+  },
+  "author": "Moriko17",
+  "license": "GPL",
+  "dependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "axios": "^0.19.0",
+    "lasso": "^3.3.1",
+    "lasso-babel-transform": "^3.0.0",
+    "lasso-marko": "^2.4.8",
+    "lasso-sass": "^3.0.0",
+    "sass": "^1.23.0"
+  }
+}
