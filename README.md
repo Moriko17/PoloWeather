@@ -13,7 +13,7 @@ Edit components/weather.marko
 ### Compile  
 Run  
 
-    npm run-script build
+    npm run build
 
 ### Edit styles  
 Run  
