@@ -43,10 +43,10 @@ class {
             degr: Math.round(response.data.main.temp),
             wind: response.data.wind.speed,
             clouds: response.data.clouds.all,
-            pressure: response.data.main.pressure,
+            pressure: (response.data.main.pressure * 0.750062).toFixed(0),
             humidity: response.data.main.humidity,
             show: true,
-            err: false,
+            err: '',
         }
     }
 }
@@ -58,7 +58,7 @@ class {
     </form>
     <div class="data">
         <if(state.show === true)>
-            <if(state.err == '')>
+            <if(state.err === '')>
                 <div class="city-degr-part">
                     <p class="city-name">${state.city}</p>
                     <p class="degr">${state.degr} °C</p>
@@ -72,7 +72,7 @@ class {
                 <div class="secondary-ans">
                     <p>${state.wind} m/s</p>
                     <p>${state.clouds} %</p>
-                    <p>${(state.pressure * 0.750062).toFixed(0)} mmHg</p>
+                    <p>${state.pressure} mmHg</p>
                     <p>${state.humidity} %</p>
                 </div>
             </if>
