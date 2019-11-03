@@ -1,0 +1,31 @@
+<div class="container">
+    <form on-submit("updatePage") class="input-form">
+        <input class="input-text" type="text" pattern="[A-Za-z]+" placeholder="Enter city name here." required title="Only letters are allowed" autocomplete="off" id="city">
+        <input type="submit" value="Send">
+    </form>
+    <div class="data">
+        <if(state.show === true)>
+            <if(state.err === '')>
+                <div class="city-degr-part">
+                    <p class="city-name">${state.city}</p>
+                    <p class="degr">${state.degr} °C</p>
+                </div>
+                <div class="secondary-qw">
+                    <p>Wind</p>
+                    <p>Clouds</p>
+                    <p>Pressure</p>
+                    <p>Humidity</p>
+                </div>
+                <div class="secondary-ans">
+                    <p>${state.wind} m/s</p>
+                    <p>${state.clouds} %</p>
+                    <p>${state.pressure} mmHg</p>
+                    <p>${state.humidity} %</p>
+                </div>
+            </if>
+            <else>
+                <p class="err">Something goes wrong : ${state.err}</p>
+            </else>
+        </if>
+    </div>
+</div>
