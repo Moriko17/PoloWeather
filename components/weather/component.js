@@ -21,7 +21,7 @@ module.exports = class {
   }
 
   updateWeather(cityName) {
-    axios
+    return axios
       .get(this.buildURL(cityName))
       .then(response => {
         this.buildState(response);
