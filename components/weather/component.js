@@ -27,8 +27,7 @@ module.exports = class {
         this.buildState(response);
       })
       .catch(error => {
-        this.state.show = true;
-        this.state.err = error.response.status;
+        this.buildState(error.response);
       });
   }
 
@@ -55,6 +54,6 @@ module.exports = class {
             show: true,
             err: ""
           }
-        : { show: true, err: "No data" };
+        : { show: true, err: response.status };
   }
 };
