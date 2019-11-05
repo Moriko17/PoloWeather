@@ -7,14 +7,15 @@ Run
     npm i 
     
 ### Compile  
-Run tests  
-
-    npm run test  
-    
 Run  
 
     npm run build
+  
+### Test  
+Run  
 
+    npm run test  
+    
 ### Edit styles  
 Run  
 
